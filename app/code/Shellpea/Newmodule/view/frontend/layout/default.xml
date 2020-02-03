@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" layout="1column" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <body>
+        <referenceContainer name="content.top">
+            <block class="Shellpea\Newmodule\Block\Coblock" name="block.first" template="Shellpea_Newmodule::tempoblock.phtml">
+            </block>
+        </referenceContainer>
+        <referenceContainer name="content">
+            <block class="Shellpea\Newmodule\Block\Index" name="newmodule_index_index" template="Shellpea_Newmodule::index.phtml">
+                <arguments>
+                    <argument name="color" xsi:type="string">lightskyblue</argument>
+                    <argument name="background_color" xsi:type="string">#000</argument>
+                </arguments>
+            </block>
+        </referenceContainer>        
+    </body>
+</page>

@@ -1,0 +1,3 @@
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <move element="newmodule_index_index" destination="sidebar.additional" as="newmodule.index.index" after="wishlist_sidebar" />
+</page>

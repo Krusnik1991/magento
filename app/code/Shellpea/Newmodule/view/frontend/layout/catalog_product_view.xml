@@ -1,0 +1,11 @@
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" layout="1column" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <body>
+        <referenceContainer name="content">
+            <referenceBlock class="Shellpea\Newmodule\Block\Index" name="newmodule_index_index" template="Shellpea_Newmodule::index.phtml">
+                <arguments>
+                    <argument name="color" xsi:type="string">orange</argument>
+                </arguments>
+            </referenceBlock>
+        </referenceContainer>
+    </body>
+</page>
