@@ -9,6 +9,7 @@
 
 @account-nav-background: @sidebar__background-color;
 @account-nav-color: false;
+@text__color: #c8ff00;
 
 @account-nav-current-border: 3px solid transparent;
 @account-nav-current-border-color: @active__color;
@@ -30,7 +31,7 @@
 //  _____________________________________________
 
 & when (@media-common = true) {
-    .login-container {
+     .login-container {
         .block {
             &-new-customer {
                 .actions-toolbar {
@@ -44,13 +45,14 @@
             }
         }
 
+
         .fieldset {
             .lib-form-hasrequired(bottom);
             &:after {
                 margin-top: 35px;
             }
         }
-    }
+    }   
 
     .block-addresses-list {
         .items.addresses {
@@ -88,6 +90,94 @@
             line-height: 26px;
         }
     }
+
+    .customer-account-login {
+        a, .alink {
+            transition: color .2s ease-out 0s;
+            -webkit-transition: color .2s ease-out 0s;
+            -moz-transition: color .2s ease-out 0s;
+            -o-transition: color .2s ease-out 0s;
+            text-decoration-skip-ink: none;
+            -webkit-transition: opacity .2s ease-out 0s;
+            -moz-transition: opacity .2s ease-out 0s;
+            -o-transition: opacity .2s ease-out 0s;
+            transition: opacity .2s ease-out 0s;
+
+            &:link {
+                color: #009c0c;
+            }
+
+            &:visited {
+                color: #456f48;
+            }
+    
+            &:hover {
+                color: #ff6b00;
+            }
+
+            &:active {
+                opacity: 0.5;
+            }
+        }
+
+        .action.primary {
+            background: #009c0c;
+            border-color: #009c0c;
+            transition: color .2s ease-out 0s;
+            -webkit-transition: color .2s ease-out 0s;
+            -moz-transition: color .2s ease-out 0s;
+            -o-transition: color .2s ease-out 0s;
+            text-decoration-skip-ink: none;
+            -webkit-transition: opacity .2s ease-out 0s;
+            -moz-transition: opacity .2s ease-out 0s;
+            -o-transition: opacity .2s ease-out 0s;
+            transition: opacity .2s ease-out 0s;
+            &:hover {
+                background-color:#c75f13;
+                border-color: #c75f13;
+            }
+            &:active {
+                opacity: 0.5;
+            }
+            span {
+                color: #fff;
+            }
+        }
+
+        .login-container {
+         .fieldset {
+            &:after {
+                color: #ff148a;
+            }
+         }
+        }
+
+        .minicart-wrapper {
+            .action.showcart {
+                transition: color .2s ease-out 0s;
+                -webkit-transition: color .2s ease-out 0s;
+                -moz-transition: color .2s ease-out 0s;
+                -o-transition: color .2s ease-out 0s;
+                text-decoration-skip-ink: none;
+                -webkit-transition: opacity .2s ease-out 0s;
+                -moz-transition: opacity .2s ease-out 0s;
+                -o-transition: opacity .2s ease-out 0s;
+                transition: opacity .2s ease-out 0s;
+                &:before {
+                    color: #009c0c;
+
+                }
+                &:hover:before {
+                    color: #ff6b00;
+                }
+
+                &:active {
+                    opacity: 0.5;
+                }
+            }
+        }
+    }
+   
 
     //  Full name fieldset
     .fieldset {
@@ -345,6 +435,160 @@
 }
 
 //
+//  Text custom
+//  _____________________________________________
+
+@text-input-background_color: #f7f7f7;
+@text-input-background_color__focus: #ff8484;
+@text-input-color: #7900d2;
+@text-input-mage_error-color: #ff148a;
+@text-input-border_color: #f7f7f7;
+@text-input-border_color__focus: #ff8484;
+
+
+.media-width(@extremum, @break) when (@extremum = 'min') and (@break = @screen__m) {
+    .customer-account-login {
+        input:not([disabled]):focus{
+            box-shadow: none;
+        }
+        input[type="text"] {
+            background-color: @text-input-background_color;
+            color: @text-input-color;
+            border: 2px solid @text-input-border_color;
+            border-radius: 10px;
+            height: 40px;
+            font-size: 20px;
+
+            &:focus {
+                background-color: @text-input-background_color__focus;
+                border: 2px solid @text-input-border_color__focus;
+            }
+
+            &::placeholder {
+                font-size: 16px;
+            }
+        }
+
+        .mage-error {
+            color: @text-input-mage_error-color;
+                font-size: 1.4rem;
+        }   
+    }
+}
+
+.media-width(@extremum, @break) when (@extremum = 'min') and (@break = @screen__m) {
+    .action.subscribe {
+        height: 40px;
+    }
+
+    .block.newsletter {
+        .field {
+            .control{
+                &:before {
+                    line-height: 40px;
+                }
+            }
+        }
+    }
+
+    .nav-section-item-content {
+        .navigation {
+            background-color: #f7f7f7;
+        }
+    }
+    
+    .form.minisearch {
+        .action.search {
+            &:before {
+                line-height: 30px;
+            }
+        }
+    }
+}
+
+//
+//  Password custom
+//  _____________________________________________
+
+@password-input-background_color: #f7f7f7;
+@password-input-background_color__focus: #ff8484;
+@password-input-color: #7900d2;
+@password-input-mage_error-color: #ff148a;
+@password-input-border_color: #f7f7f7;
+@password-input-border_color__focus: #ff8484;
+
+
+.media-width(@extremum, @break) when (@extremum = 'min') and (@break = @screen__m) {
+    .customer-account-login {
+        input:not([disabled]):focus{
+            box-shadow: none;
+        }
+        input[type="password"] {
+            background-color: @password-input-background_color;
+            color: @password-input-color;
+            border: 2px solid @password-input-border_color;
+            border-radius: 10px;
+            height: 40px;
+            font-size: 20px;
+
+            &::placeholder {
+                font-size: 16px;
+            }
+            &:focus {
+                background-color: @password-input-background_color__focus;
+                border: 2px solid @password-input-border_color__focus;
+            }    
+        }
+
+        .mage-error {
+            color: @password-input-mage_error-color;
+                font-size: 1.4rem;
+        }   
+    }
+}
+
+//
+//  Email
+//  _____________________________________________
+
+@email-input-background_color: #f7f7f7;
+@email-input-background_color__focus: #ff8484;
+@email-input-color: #7900d2;
+@email-input-mage_error-color: #ff148a;
+@email-input-border_color: #f7f7f7;
+@email-input-border_color__focus: #ff8484;
+
+
+.media-width(@extremum, @break) when (@extremum = 'min') and (@break = @screen__m) {
+    .customer-account-login {
+        input:not([disabled]):focus{
+            box-shadow: none;
+        }
+        input[type="email"] {
+            background-color: @email-input-background_color;
+            color: @email-input-color;
+            border: 2px solid @email-input-border_color;
+            border-radius: 10px;
+            height: 40px;
+            font-size: 20px;
+
+            &::placeholder {
+                font-size: 16px;
+            }
+            &:focus {
+                background-color: @email-input-background_color__focus;
+                border: 2px solid @email-input-border_color__focus;
+            }    
+        }
+
+        .mage-error {
+            color: @email-input-mage_error-color;
+                font-size: 1.4rem;
+        }   
+    }
+}
+
+//
 //  Mobile
 //  _____________________________________________
 
@@ -401,6 +645,7 @@
     }
 }
 
+
 //
 //  Desktop
 //  _____________________________________________
@@ -408,7 +653,6 @@
 .media-width(@extremum, @break) when (@extremum = 'min') and (@break = @screen__m) {
     .login-container {
         &:extend(.abs-add-clearfix-desktop all);
-        margin-top: 3000px;
 
         .block {
             &:extend(.abs-blocks-2columns all);
