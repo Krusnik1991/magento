@@ -2,8 +2,8 @@
 <page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" layout="1column" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
     <body>
         <referenceContainer name="content.top">
-            <block class="Shellpea\Newmodule\Block\Coblock" name="block.first" template="Shellpea_Newmodule::tempoblock.phtml">
-            </block>
+            <block class="Shellpea\Newmodule\Block\Coblock" name="block.first" template="Shellpea_Newmodule::tempoblock.phtml" />
+            <referenceBlock remove="true" name="block.first" />
         </referenceContainer>
         <referenceContainer name="content">
             <block class="Shellpea\Newmodule\Block\Index" name="newmodule_index_index" template="Shellpea_Newmodule::index.phtml">

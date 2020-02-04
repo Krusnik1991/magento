@@ -3,6 +3,9 @@
         <referenceContainer name="content">
             <block class="Shellpea\Newmodule\Block\Portfolio" name="shellpea.common.global" template="Shellpea_Newmodule::portfolio.phtml">
             </block>
+            <referenceBlock remove="true"  name="shellpea.common.global" />
+            <referenceBlock remove="true" name="newmodule_index_index" />
         </referenceContainer>
     </body>
 </page>
+<!-- magic -->
