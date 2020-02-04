@@ -52,7 +52,7 @@
                 margin-top: 35px;
             }
         }
-    }   
+    }
 
     .block-addresses-list {
         .items.addresses {
@@ -93,11 +93,11 @@
 
     .customer-account-login {
         a, .alink {
-            transition: color .2s ease-out 0s;
             -webkit-transition: color .2s ease-out 0s;
             -moz-transition: color .2s ease-out 0s;
             -o-transition: color .2s ease-out 0s;
             text-decoration-skip-ink: none;
+            transition: color .2s ease-out 0s;
             -webkit-transition: opacity .2s ease-out 0s;
             -moz-transition: opacity .2s ease-out 0s;
             -o-transition: opacity .2s ease-out 0s;
@@ -121,52 +121,55 @@
         }
 
         .action.primary {
+            text-decoration-skip-ink: none;
             background: #009c0c;
             border-color: #009c0c;
-            transition: color .2s ease-out 0s;
             -webkit-transition: color .2s ease-out 0s;
             -moz-transition: color .2s ease-out 0s;
             -o-transition: color .2s ease-out 0s;
-            text-decoration-skip-ink: none;
+            transition: color .2s ease-out 0s;
             -webkit-transition: opacity .2s ease-out 0s;
             -moz-transition: opacity .2s ease-out 0s;
             -o-transition: opacity .2s ease-out 0s;
             transition: opacity .2s ease-out 0s;
+
             &:hover {
                 background-color:#c75f13;
                 border-color: #c75f13;
             }
+
             &:active {
                 opacity: 0.5;
             }
+
             span {
                 color: #fff;
             }
         }
 
         .login-container {
-         .fieldset {
-            &:after {
-                color: #ff148a;
+            .fieldset {
+                &:after {
+                    color: #ff148a;
+                }
             }
-         }
         }
 
         .minicart-wrapper {
             .action.showcart {
-                transition: color .2s ease-out 0s;
+                text-decoration-skip-ink: none;
                 -webkit-transition: color .2s ease-out 0s;
                 -moz-transition: color .2s ease-out 0s;
                 -o-transition: color .2s ease-out 0s;
-                text-decoration-skip-ink: none;
+                transition: color .2s ease-out 0s;
                 -webkit-transition: opacity .2s ease-out 0s;
                 -moz-transition: opacity .2s ease-out 0s;
                 -o-transition: opacity .2s ease-out 0s;
                 transition: opacity .2s ease-out 0s;
                 &:before {
                     color: #009c0c;
-
                 }
+
                 &:hover:before {
                     color: #ff6b00;
                 }
@@ -177,7 +180,6 @@
             }
         }
     }
-   
 
     //  Full name fieldset
     .fieldset {
@@ -445,12 +447,12 @@
 @text-input-border_color: #f7f7f7;
 @text-input-border_color__focus: #ff8484;
 
-
 .media-width(@extremum, @break) when (@extremum = 'min') and (@break = @screen__m) {
     .customer-account-login {
         input:not([disabled]):focus{
             box-shadow: none;
         }
+
         input[type="text"] {
             background-color: @text-input-background_color;
             color: @text-input-color;
@@ -459,20 +461,20 @@
             height: 40px;
             font-size: 20px;
 
+            &::placeholder {
+                font-size: 16px;
+            }
+
             &:focus {
                 background-color: @text-input-background_color__focus;
                 border: 2px solid @text-input-border_color__focus;
             }
-
-            &::placeholder {
-                font-size: 16px;
-            }
         }
-
+  
         .mage-error {
             color: @text-input-mage_error-color;
-                font-size: 1.4rem;
-        }   
+            font-size: 1.4rem;
+        }
     }
 }
 
@@ -496,7 +498,7 @@
             background-color: #f7f7f7;
         }
     }
-    
+
     .form.minisearch {
         .action.search {
             &:before {
@@ -523,6 +525,7 @@
         input:not([disabled]):focus{
             box-shadow: none;
         }
+
         input[type="password"] {
             background-color: @password-input-background_color;
             color: @password-input-color;
@@ -534,16 +537,17 @@
             &::placeholder {
                 font-size: 16px;
             }
+
             &:focus {
                 background-color: @password-input-background_color__focus;
                 border: 2px solid @password-input-border_color__focus;
-            }    
+            }
         }
 
         .mage-error {
             color: @password-input-mage_error-color;
-                font-size: 1.4rem;
-        }   
+            font-size: 1.4rem;
+        }
     }
 }
 
@@ -558,12 +562,12 @@
 @email-input-border_color: #f7f7f7;
 @email-input-border_color__focus: #ff8484;
 
-
 .media-width(@extremum, @break) when (@extremum = 'min') and (@break = @screen__m) {
     .customer-account-login {
         input:not([disabled]):focus{
             box-shadow: none;
         }
+
         input[type="email"] {
             background-color: @email-input-background_color;
             color: @email-input-color;
@@ -575,16 +579,17 @@
             &::placeholder {
                 font-size: 16px;
             }
+
             &:focus {
                 background-color: @email-input-background_color__focus;
                 border: 2px solid @email-input-border_color__focus;
-            }    
+            }
         }
 
         .mage-error {
             color: @email-input-mage_error-color;
-                font-size: 1.4rem;
-        }   
+            font-size: 1.4rem;
+        }
     }
 }
 
