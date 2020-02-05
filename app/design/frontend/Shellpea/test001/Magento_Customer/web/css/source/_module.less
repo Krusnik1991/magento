@@ -26,6 +26,28 @@
 @_password-strong: #c5eeac;
 @_password-very-strong: #81b562;
 
+
+.mixin-opacity-transition(@arg1: .2s, @arg2: ease-in-out, @arg3: 0s){
+    -webkit-transition: opacity @arg1 @arg2 @arg3;
+    -moz-transition: opacity @arg1 @arg2 @arg3;
+    -o-transition: opacity @arg1 @arg2 @arg3;
+    transition: opacity @arg1 @arg2 @arg3;
+}
+
+.mixin-color-transition(@arg1: .2s, @arg2: ease-in-out, @arg3: 0s) {
+    -webkit-transition: color @arg1 @arg2 @arg3;
+    -moz-transition: color @arg1 @arg2 @arg3;
+    -o-transition: color @arg1 @arg2 @arg3;
+    transition: color @arg1 @arg2 @arg3;
+}
+
+.mixin-transition-two(@prop1: opacity, @arg1: .2s, @arg2: ease-out, @arg3: 0s, @prop2: color, @arg4: .2s, @arg5: ease-out, @arg6: 0s) {
+    -webkit-transition:@prop1 @arg1 @arg2 @arg3, @prop2 @arg4 @arg5 @arg6;
+    -moz-transition: @prop1 @arg1 @arg2 @arg3, @prop2 @arg4 @arg5 @arg6;
+    -o-transition: @prop1 @arg1 @arg2 @arg3, @prop2 @arg4 @arg5 @arg6;
+    transition: @prop1 @arg1 @arg2 @arg3, @prop2 @arg4 @arg5 @arg6;
+}
+
 //
 //  Common
 //  _____________________________________________
@@ -93,15 +115,8 @@
 
     .customer-account-login {
         a, .alink {
-            -webkit-transition: color .2s ease-out 0s;
-            -moz-transition: color .2s ease-out 0s;
-            -o-transition: color .2s ease-out 0s;
             text-decoration-skip-ink: none;
-            transition: color .2s ease-out 0s;
-            -webkit-transition: opacity .2s ease-out 0s;
-            -moz-transition: opacity .2s ease-out 0s;
-            -o-transition: opacity .2s ease-out 0s;
-            transition: opacity .2s ease-out 0s;
+            .mixin-transition-two();
 
             &:link {
                 color: #009c0c;
@@ -124,14 +139,7 @@
             text-decoration-skip-ink: none;
             background: #009c0c;
             border-color: #009c0c;
-            -webkit-transition: color .2s ease-out 0s;
-            -moz-transition: color .2s ease-out 0s;
-            -o-transition: color .2s ease-out 0s;
-            transition: color .2s ease-out 0s;
-            -webkit-transition: opacity .2s ease-out 0s;
-            -moz-transition: opacity .2s ease-out 0s;
-            -o-transition: opacity .2s ease-out 0s;
-            transition: opacity .2s ease-out 0s;
+            .mixin-transition-two(@prop2: background);
 
             &:hover {
                 background-color:#c75f13;
@@ -158,16 +166,11 @@
         .minicart-wrapper {
             .action.showcart {
                 text-decoration-skip-ink: none;
-                -webkit-transition: color .2s ease-out 0s;
-                -moz-transition: color .2s ease-out 0s;
-                -o-transition: color .2s ease-out 0s;
-                transition: color .2s ease-out 0s;
-                -webkit-transition: opacity .2s ease-out 0s;
-                -moz-transition: opacity .2s ease-out 0s;
-                -o-transition: opacity .2s ease-out 0s;
-                transition: opacity .2s ease-out 0s;
+                .mixin-opacity-transition();
+
                 &:before {
                     color: #009c0c;
+                    .mixin-color-transition();
                 }
 
                 &:hover:before {
@@ -471,7 +474,7 @@
             }
         }
   
-        .mage-error {
+        div.mage-error {
             color: @text-input-mage_error-color;
             font-size: 1.4rem;
         }
