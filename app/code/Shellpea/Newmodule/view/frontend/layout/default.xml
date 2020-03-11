@@ -12,6 +12,6 @@
                     <argument name="background_color" xsi:type="string">#000</argument>
                 </arguments>
             </block>
-        </referenceContainer>        
+        </referenceContainer>
     </body>
 </page>

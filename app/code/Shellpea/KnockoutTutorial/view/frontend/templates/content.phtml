@@ -1,0 +1,17 @@
+<div data-bind="scope: 'kk'">
+    <!-- ko template: getTemplate() --><!-- /ko -->
+</div>
+<script type="text/x-magento-init">
+{
+            "*": {
+                "Magento_Ui/js/core/app": {
+                    "components": {
+                        "kk": {
+                            "component": "Shellpea_KnockoutTutorial/js/kk",
+                            "template" : "Shellpea_KnockoutTutorial/kkexample"
+                        }
+                    }
+                }
+            }
+        }
+</script>
